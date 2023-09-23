@@ -1,0 +1,109 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$custom-dark-green-palette: (
+  50: #F5FAF9,
+  100: #E1F2EB,
+  200: #CCE9E2,
+  300: #B6E1D8,
+  400: #A1D9CE,
+  500: #5C8374,
+  600: #4F6F61,
+  700: #425C4D,
+  800: #354839,
+  900: #283526,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #FFFFFF,
+    500: #FFFFFF,
+    600: #FFFFFF,
+    700: #FFFFFF,
+    800: #FFFFFF,
+    900: #FFFFFF,
+  )
+);
+
+$secondary-crimson-red-palette: (
+  50: #FFEBEE,
+  100: #FFCDD2,
+  200: #EF9A9A,
+  300: #E57373,
+  400: #EF5350,
+  500: #F44336,
+  600: #E53935,
+  700: #D32F2F,
+  800: #C62828,
+  900: #B71C1C,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #FFFFFF,
+    500: #FFFFFF,
+    600: #FFFFFF,
+    700: #FFFFFF,
+    800: #FFFFFF,
+    900: #FFFFFF,
+  )
+);
+
+$secondary-warm-tones-palette: (
+  50: #FFF3E0,
+  100: #FFE0B2,
+  200: #FFCC80,
+  300: #FFB74D,
+  400: #FFA726,
+  500: #FF9800,
+  600: #FB8C00,
+  700: #F57C00,
+  800: #EF6C00,
+  900: #E65100,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #FFFFFF,
+    900: #FFFFFF,
+  )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$budget-tracker-primary: mat.define-palette($custom-dark-green-palette);
+$budget-tracker-accent: mat.define-palette($secondary-warm-tones-palette);
+
+// The warn palette is optional (defaults to red).
+$budget-tracker-warn: mat.define-palette($secondary-crimson-red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$budget-tracker-theme: mat.define-light-theme((
+  color: (
+    primary: $budget-tracker-primary,
+    accent: $budget-tracker-accent,
+    warn: $budget-tracker-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($budget-tracker-theme);
