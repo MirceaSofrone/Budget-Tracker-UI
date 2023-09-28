@@ -13,6 +13,7 @@
     "prerender": "ng run budget-tracker:prerender",
     "lint": "eslint --ext .ts,.html,.scss src/",
     "lint:fix": "eslint --fix --ext .ts,.html,.scss src/",
+    "lint:sass": "stylelint 'src/**/*.scss' --fix",
     "prepare": "husky install"
   },
   "private": true,
@@ -45,6 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
     "eslint": "^8.50.0",
+    "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-sonarjs": "^0.21.0",
     "husky": "^8.0.0",
     "jasmine-core": "~4.6.0",
@@ -54,6 +56,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "lint-staged": "^14.0.1",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.0.0",
     "typescript": "~5.1.3"
   }
 }
