@@ -27,7 +27,9 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'eslint-plugin-sonarjs',
+    'eslint-plugin-html',
   ],
   'ignorePatterns': [
     'node_modules',

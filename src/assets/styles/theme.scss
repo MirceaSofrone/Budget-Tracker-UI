@@ -1,12 +1,13 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.core();
+@include mat.core;
 
 $custom-dark-green-palette: (
   50: #F5FAF9,
@@ -20,19 +21,18 @@ $custom-dark-green-palette: (
   800: #354839,
   900: #283526,
   contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #FFFFFF,
-    500: #FFFFFF,
-    600: #FFFFFF,
-    700: #FFFFFF,
-    800: #FFFFFF,
-    900: #FFFFFF,
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #FFF,
+    500: #FFF,
+    600: #FFF,
+    700: #FFF,
+    800: #FFF,
+    900: #FFF,
   )
 );
-
 $secondary-crimson-red-palette: (
   50: #FFEBEE,
   100: #FFCDD2,
@@ -45,19 +45,18 @@ $secondary-crimson-red-palette: (
   800: #C62828,
   900: #B71C1C,
   contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #FFFFFF,
-    500: #FFFFFF,
-    600: #FFFFFF,
-    700: #FFFFFF,
-    800: #FFFFFF,
-    900: #FFFFFF,
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #FFF,
+    500: #FFF,
+    600: #FFF,
+    700: #FFF,
+    800: #FFF,
+    900: #FFF,
   )
 );
-
 $secondary-warm-tones-palette: (
   50: #FFF3E0,
   100: #FFE0B2,
@@ -70,16 +69,16 @@ $secondary-warm-tones-palette: (
   800: #EF6C00,
   900: #E65100,
   contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #000000,
-    700: #000000,
-    800: #FFFFFF,
-    900: #FFFFFF,
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #000,
+    500: #000,
+    600: #000,
+    700: #000,
+    800: #FFF,
+    900: #FFF,
   )
 );
 
